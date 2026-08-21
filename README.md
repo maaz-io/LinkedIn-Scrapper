@@ -1,663 +1,542 @@
-# LinkedIn Scraper 🔎
+# LinkedIn Scraper — AI-Powered Lead Extraction Platform
 
-> **AI-powered LinkedIn lead scraping platform that transforms natural-language search requirements into structured lead data and downloadable CSV exports.**
+> **A browser-assisted LinkedIn scraping and lead extraction platform that turns natural-language search requirements into structured, downloadable CSV datasets.**
 
----
+## 📌 Project Description
 
-## 📌 Overview
+**LinkedIn Scraper** is a browser-assisted lead-generation and data-extraction application designed to make targeted LinkedIn research faster and easier.
 
-**LinkedIn Scraper** is an intelligent lead-generation and data-extraction platform designed to simplify the process of finding targeted LinkedIn profiles.
+Instead of manually searching LinkedIn and copying profiles one by one, the user describes the type of people or companies they want to find in plain English. The application then launches a browser-based LinkedIn workflow, prompts the user to authenticate with LinkedIn, and begins collecting matching profile data.
 
-Instead of manually searching through LinkedIn and collecting profile information one by one, users can simply describe **who they want to find in plain English**.
+Once the extraction process is complete, the collected records are made available through a dedicated **Exports** section, where the resulting lead dataset can be downloaded as a **CSV file** for further analysis, CRM import, outreach, or lead-management workflows.
 
-The platform then uses an automated browser-assisted scraping workflow to search LinkedIn, extract relevant profile information, process the collected data, and make the resulting leads available for download as a **CSV file**.
-
-The project is designed around a simple idea:
-
-> **Describe the leads you need → Let the scraper find them → Export the data.**
+> **Important:** The application is intended for authorized and compliant use. Users should ensure that their use of LinkedIn data, automated browsing, and exported information complies with LinkedIn's applicable terms, policies, privacy requirements, and local laws.
 
 ---
 
-# ✨ Key Features
+## ✨ Core Concept
 
-### 🤖 Natural-Language Scraping
-
-Users don't need to configure complicated scraping filters.
-
-They can simply enter something like:
+The platform follows a simple workflow:
 
 ```text
-Find startup founders in San Francisco
+Natural-Language Search
+        ↓
+Enter Scraping Requirement
+        ↓
+Launch Browser
+        ↓
+LinkedIn Authentication
+        ↓
+Automated Search / Extraction
+        ↓
+Collect Structured Profile Data
+        ↓
+Process & Store Leads
+        ↓
+Exports Dashboard
+        ↓
+Download CSV
+```
+
+The main objective is to remove repetitive manual research from the lead-generation process while keeping the search requirement simple and human-readable.
+
+---
+
+# 🖥️ Application Screenshots
+
+## 1. Scraper Interface
+
+The main interface allows the user to describe who they want to find on LinkedIn using natural language.
+
+For example, a user can specify a niche such as:
+
+- SaaS founders
+- Startup founders
+- CEOs
+- Marketing executives
+- Investors
+- Software companies
+- Professionals in a particular location
+- People matching a specific business profile
+
+The application then starts the extraction workflow based on the submitted requirement.
+
+![LinkedIn Scraper Interface](assets/scraper-interface.png)
+
+---
+
+## 2. Export Dashboard
+
+After extraction, collected data is made available through the **Exports** page.
+
+The dashboard provides an organized view of generated exports, including information such as:
+
+- Export files
+- Number of leads
+- Export status
+- File size
+- Creation date
+- Ready-to-use datasets
+
+The extracted dataset can then be downloaded as a CSV file.
+
+![LinkedIn Scraper Exports Dashboard](assets/exports-page.png)
+
+---
+
+# 🚀 How It Works
+
+## Step 1 — Describe What You Want to Find
+
+The user enters a natural-language requirement describing the target audience or niche.
+
+Example:
+
+```text
+Find startup founders in the United States
 ```
 
 or:
 
 ```text
-Find SaaS CEOs in the United States
+Find CEOs of SaaS companies in London
 ```
 
-or:
+The idea is to allow users to define their target without having to manually configure multiple complicated search filters.
+
+---
+
+## Step 2 — Start the Scraping Workflow
+
+After submitting the search requirement, the application initiates the browser-assisted extraction process.
+
+The workflow opens a browser session for LinkedIn interaction.
+
+---
+
+## Step 3 — LinkedIn Authentication
+
+The user is prompted to sign in to LinkedIn through the browser session.
+
+This approach keeps the authentication step user-controlled instead of requiring the application to collect or store the user's LinkedIn password.
 
 ```text
-Find software company founders in London
+Application
+     ↓
+Browser Session
+     ↓
+LinkedIn Login
+     ↓
+User Authentication
+     ↓
+Authorized Session
 ```
-
-The system interprets the requested niche and uses it as the basis for the scraping process.
 
 ---
 
-### 🔎 Active LinkedIn Scraping
+## Step 4 — Active Extraction
 
-After submitting a scraping request, the application initiates an automated browser workflow.
+Once authentication is completed, the scraper begins processing the requested search.
 
-The browser opens LinkedIn and asks the user to authenticate if required.
+The extraction phase can collect structured information from matching LinkedIn profiles according to the configured workflow.
 
-Once LinkedIn authentication is completed, the scraping process begins.
+The interface provides extraction progress information so the user can monitor the process.
+
+Typical progress information can include:
+
+- Current search/query
+- Profiles processed
+- Profiles scraped
+- Leads saved
+- Errors encountered
+- Overall extraction progress
+
+---
+
+## Step 5 — Data Processing
+
+Collected records are processed into a structured dataset.
+
+The purpose of this processing stage is to transform browser-collected information into a format that can be easily used outside the application.
+
+---
+
+## Step 6 — Export to CSV
+
+After extraction is complete, the generated dataset becomes available from the **Exports** dashboard.
+
+Users can download the resulting lead list as a CSV file.
+
+CSV makes the data compatible with many common workflows, including:
+
+- CRM systems
+- Spreadsheet applications
+- Lead-management platforms
+- Business intelligence tools
+- Data analysis workflows
+- Outreach systems
+
+---
+
+# 🔍 Main Features
+
+## Natural-Language Scraping Queries
+
+Users can describe their target audience using ordinary language instead of manually configuring complex search parameters.
+
+---
+
+## AI-Assisted Search Interpretation
+
+The application is designed around an AI-assisted workflow where the user's natural-language requirement can be translated into a targeted extraction task.
+
+This makes the interface accessible to users who may not understand technical scraping configuration.
+
+---
+
+## Browser-Assisted LinkedIn Workflow
+
+The application uses a browser-based workflow for LinkedIn interaction.
+
+This enables the user to authenticate through the browser before the extraction process begins.
+
+---
+
+## Active Scraping
+
+Once the workflow begins, the application actively processes the requested LinkedIn search and collects matching records.
+
+The scraper can operate through a defined extraction workflow rather than requiring the user to manually copy information from each result.
+
+---
+
+## Progress Monitoring
+
+The extraction interface provides live-style progress information such as:
 
 ```text
-User enters search requirement
-            ↓
-      Submit request
-            ↓
-    Browser opens LinkedIn
-            ↓
-      User signs in
-            ↓
-      Scraping begins
-            ↓
-    Profiles are extracted
-            ↓
-      Leads are processed
-            ↓
-     Data is saved/exported
-            ↓
-       CSV available
+Profiles Scraped
+Profiles Saved
+Extraction Progress
+Errors
+Current Query
 ```
 
----
-
-# 🖥️ Scraper Interface
-
-The main interface provides a simple search experience where users can describe the type of LinkedIn profiles they want to discover.
-
-The application also provides predefined search categories such as:
-
-* CEOs & Founders
-* SaaS Companies
-* By Location
-* Startup Investors
-
-### Interface Preview
-
-![LinkedIn Scraper Interface](Screenshot%202026-08-21%20at%202.55.36%20PM.png)
-
-The interface displays the active extraction phase and provides progress information while profiles are being collected.
-
-The extraction interface can show information such as:
-
-* Current search
-* Number of profiles scraped
-* Extraction progress
-* Leads saved
-* Errors encountered
-* Scraping status
-* Pause/Resume controls
+This makes the scraping process easier to monitor.
 
 ---
 
-# ⚡ Extraction Phase
+## Lead Collection
 
-Once the scraping process starts, the platform provides real-time feedback about the extraction process.
+Extracted profiles are treated as structured lead records that can be processed and exported.
 
-For example:
+This makes the system useful for:
 
-```text
-EXTRACTION PHASE
-
-AI Search
-startup founder / founder / entrepreneur
-
-Scraped: 0 of 100 profiles
-Progress: 0%
-
-Leads Saved: 0
-Errors: 0
-```
-
-This allows the user to monitor the scraping process instead of waiting without any visibility into what the system is doing.
+- Lead generation
+- Prospect research
+- Market research
+- Sales research
+- Business development
+- Recruiting research
+- Audience discovery
 
 ---
 
-# 📊 Lead Extraction
+## Export Management
 
-The scraper is designed to collect structured information from relevant LinkedIn profiles.
+The dedicated Exports dashboard allows users to review generated datasets.
 
-Depending on the available profile information and configured extraction logic, the resulting dataset can contain useful lead information such as:
+The interface can display:
 
-* Name
-* Professional title
-* Company
-* Location
-* Profile information
-* Professional details
-* Lead-related metadata
-
-The extracted information is then prepared for export.
+- Total exports
+- Total leads
+- Ready-to-use exports
+- File names
+- File sizes
+- Lead counts
+- Creation dates
 
 ---
 
-# 📁 Export System
+## CSV Export
 
-After scraping is completed, the extracted leads are made available through the **Exports** section.
+The primary output format is CSV.
 
-The exports dashboard provides a centralized location for managing generated datasets.
-
-### Exports Preview
-
-![LinkedIn Scraper Exports](Screenshot%202026-08-21%20at%202.56.42%20PM.png)
-
-The export interface provides information such as:
-
-* Total exports
-* Total leads
-* Ready-to-use datasets
-* File names
-* File size
-* Number of leads
-* Creation date
-
----
-
-# 📥 CSV Export
-
-One of the primary features of the platform is the ability to export scraped LinkedIn leads into a **CSV file**.
-
-This makes the extracted data easy to use with:
-
-* Excel
-* Google Sheets
-* CRM systems
-* Sales tools
-* Marketing platforms
-* Lead management systems
-* Data analysis workflows
+This makes extracted data easy to move into other business systems and tools.
 
 Example workflow:
 
 ```text
-LinkedIn Search
-      ↓
-Profile Extraction
-      ↓
-Lead Processing
-      ↓
-Structured Dataset
-      ↓
+LinkedIn
+   ↓
+Scraper
+   ↓
+Structured Leads
+   ↓
 CSV Export
-      ↓
-Download
+   ↓
+CRM / Spreadsheet / Analytics
 ```
 
 ---
 
-# 🎯 Example Use Cases
+# 🎯 Use Cases
 
-LinkedIn Scraper can be used for targeted lead discovery across different industries and niches.
+## Sales Prospecting
 
-### Sales Prospecting
+Build targeted prospect lists based on specific roles, industries, locations, or company characteristics.
 
-Find potential customers based on:
+## Lead Generation
 
-* Industry
-* Job title
-* Location
-* Company type
-* Professional role
+Identify potential business leads from defined LinkedIn niches.
 
----
+## Market Research
 
-### B2B Lead Generation
+Collect structured information for analyzing a specific professional or business segment.
 
-Discover potential business contacts such as:
+## Recruitment Research
 
-* CEOs
-* Founders
-* CTOs
-* Executives
-* Startup founders
-* Business owners
+Discover professional profiles matching defined roles or industry requirements.
 
----
+## Startup & Investor Research
 
-### Startup Research
+Research founders, executives, startups, and investors within selected markets.
 
-Find:
+## Business Development
 
-* Startup founders
-* Entrepreneurs
-* Investors
-* Startup executives
-* Technology companies
+Create structured prospect datasets that can be transferred into downstream business-development workflows.
 
 ---
 
-### SaaS Prospecting
+# 📊 Example Workflow
 
-Search for:
-
-* SaaS founders
-* SaaS CEOs
-* SaaS companies
-* Technology executives
-
----
-
-### Location-Based Research
-
-Users can target profiles according to geographic requirements.
-
-For example:
+Suppose a user wants to find SaaS founders in a particular market.
 
 ```text
-Find SaaS founders in New York
-```
+User enters:
+"Find SaaS founders in London"
 
-or:
-
-```text
-Find startup CEOs in London
-```
-
----
-
-# 🧠 AI-Assisted Search
-
-The main idea behind the platform is to reduce the complexity of traditional scraping interfaces.
-
-Instead of forcing users to manually configure multiple filters, the system accepts a natural-language request.
-
-### Traditional Approach
-
-```text
-Job Title
-+
-Industry
-+
-Location
-+
-Company Size
-+
-Keywords
-+
-Filters
-```
-
-### LinkedIn Scraper Approach
-
-```text
-"Find SaaS founders in California"
-```
-
-The natural-language request becomes the starting point for the automated extraction workflow.
-
----
-
-# 🔄 Complete Workflow
-
-The complete application workflow can be represented as:
-
-```text
-┌─────────────────────────┐
-│       User Request      │
-│                         │
-│ "Find SaaS founders     │
-│  in California"         │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│   Search Interpretation │
-│                         │
-│ Natural-language query  │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│   Browser Automation     │
-│                         │
-│ Open LinkedIn           │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│       Authentication    │
-│                         │
-│ User signs into LinkedIn│
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│      Active Scraping    │
-│                         │
-│ Search + Profile        │
-│ Extraction              │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│      Lead Processing    │
-│                         │
-│ Structure + Store Data  │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│       Export System     │
-│                         │
-│ Generate CSV            │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│      Download Leads     │
-│                         │
-│       CSV File           │
-└─────────────────────────┘
-```
-
----
-
-# 🖥️ User Experience
-
-The platform is designed around a minimal workflow.
-
-The user doesn't need to navigate through complicated configuration screens.
-
-### Step 1 — Describe
-
-Enter the type of people you want to find.
-
-```text
-Find CEOs of SaaS companies in the US
-```
-
-### Step 2 — Submit
-
-Start the scraping process.
-
-### Step 3 — Authenticate
-
-If required, the browser opens LinkedIn and the user signs in.
-
-### Step 4 — Scrape
-
-The system begins actively collecting relevant profiles.
-
-### Step 5 — Monitor
-
-Users can monitor:
-
-* Scraping progress
-* Profiles processed
-* Leads saved
-* Errors
-
-### Step 6 — Export
-
-Once the dataset is ready, it becomes available in the Exports dashboard.
-
-### Step 7 — Download
-
-Download the resulting leads as a CSV file.
-
----
-
-# 📈 Scraping Progress
-
-The platform provides extraction progress so users can monitor an active scraping session.
-
-Important metrics include:
-
-| Metric           | Description                   |
-| ---------------- | ----------------------------- |
-| Profiles Scraped | Number of profiles processed  |
-| Total Profiles   | Target number of profiles     |
-| Progress         | Current extraction percentage |
-| Leads Saved      | Successfully stored leads     |
-| Errors           | Extraction failures           |
-| Status           | Current scraping state        |
-
----
-
-# ⏯️ Scraping Controls
-
-The extraction interface includes controls for managing an active scraping session.
-
-For example:
-
-* Start scraping
-* Pause scraping
-* Resume scraping
-* Monitor progress
-* View extraction status
-
-This provides better control over long-running extraction tasks.
-
----
-
-# 📦 Export Management
-
-The Exports section acts as a centralized repository for generated datasets.
-
-Each export can contain metadata such as:
-
-```text
-File Name
-Size
-Number of Leads
-Creation Date
-Status
-```
-
-This makes it easier to manage multiple scraping jobs and their resulting datasets.
-
----
-
-# 🏗️ System Architecture
-
-At a high level, the platform can be divided into several components:
-
-```text
-                  ┌─────────────────┐
-                  │    Frontend     │
-                  │                 │
-                  │ Search Interface│
-                  │ Progress UI     │
-                  │ Export Dashboard│
-                  └────────┬────────┘
-                           │
-                           ▼
-                  ┌─────────────────┐
-                  │ Application API │
-                  │                 │
-                  │ Query Processing│
-                  │ Job Management  │
-                  └────────┬────────┘
-                           │
-                           ▼
-                  ┌─────────────────┐
-                  │ Scraping Engine │
-                  │                 │
-                  │ Browser         │
-                  │ Automation      │
-                  └────────┬────────┘
-                           │
-                           ▼
-                  ┌─────────────────┐
-                  │ LinkedIn        │
-                  │                 │
-                  │ Search /        │
-                  │ Profiles        │
-                  └────────┬────────┘
-                           │
-                           ▼
-                  ┌─────────────────┐
-                  │ Lead Processing │
-                  │                 │
-                  │ Structure Data  │
-                  │ Store Leads     │
-                  └────────┬────────┘
-                           │
-                           ▼
-                  ┌─────────────────┐
-                  │ Export Engine   │
-                  │                 │
-                  │ Generate CSV    │
-                  └─────────────────┘
-```
-
----
-
-# 🔐 Authentication
-
-The scraping workflow uses a browser-based authentication step.
-
-When a scraping job requires LinkedIn authentication:
-
-1. The browser opens.
-2. LinkedIn is loaded.
-3. The user signs in.
-4. The authenticated browser session is used for the scraping workflow.
-5. The extraction process begins.
-
-This approach keeps the authentication step within the browser workflow rather than asking users to provide their LinkedIn password directly to the application.
-
----
-
-# 🛡️ Privacy & Responsible Scraping
-
-This project is intended for legitimate research, prospecting, and data-collection workflows.
-
-Users should ensure that their usage complies with:
-
-* LinkedIn's Terms of Service
-* Applicable privacy regulations
-* Local data-protection requirements
-* Applicable laws and regulations
-* Organizational data-handling policies
-
-The platform should be used responsibly and only for authorized purposes.
-
----
-
-# 🚀 Why This Project?
-
-Traditional lead-generation workflows often require users to:
-
-```text
-Search manually
-      ↓
-Open profiles
-      ↓
-Copy information
-      ↓
-Paste into spreadsheet
-      ↓
-Repeat hundreds of times
-```
-
-LinkedIn Scraper aims to automate this repetitive process:
-
-```text
-Describe Target Audience
           ↓
-       Scrape
+
+Scraper interprets request
+
           ↓
-   Structured Leads
+
+Browser opens LinkedIn
+
           ↓
-       CSV
+
+User signs in
+
+          ↓
+
+Extraction starts
+
+          ↓
+
+Matching profiles are processed
+
+          ↓
+
+Leads are saved
+
+          ↓
+
+Export is generated
+
+          ↓
+
+CSV downloaded
 ```
 
-The result is a significantly more streamlined lead-discovery workflow.
+The resulting file can then be used for further research, CRM enrichment, or authorized outreach workflows.
 
 ---
 
-# 🎨 Design
+# 🧱 Application Architecture
 
-The application uses a dark, premium interface with a strong purple/blue visual identity.
+At a high level, the system can be understood as several connected layers:
+
+```text
+┌─────────────────────────────┐
+│        User Interface       │
+│  Natural Language Search    │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│       Search / AI Layer     │
+│ Query Interpretation        │
+│ Extraction Configuration    │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│     Browser Automation      │
+│   LinkedIn Interaction      │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│     Extraction Pipeline     │
+│ Profile Collection          │
+│ Data Processing             │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│       Lead Storage          │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│       Export System         │
+│          CSV                │
+└─────────────────────────────┘
+```
+
+---
+
+# 📁 Project Output
+
+The primary output of the application is a structured lead dataset.
+
+A typical CSV export can be used as a portable dataset for downstream systems.
+
+Example conceptual structure:
+
+```csv
+Name,Job Title,Company,Location,Profile URL
+John Doe,CEO,Example SaaS,London,https://...
+Jane Smith,Founder,Example Startup,London,https://...
+```
+
+> The exact fields included in an export depend on the scraper configuration and the information available during the extraction workflow.
+
+---
+
+# ⚡ Why This Project?
+
+Traditional lead research often requires users to:
+
+1. Open LinkedIn
+2. Search manually
+3. Review profiles individually
+4. Copy information
+5. Paste it into spreadsheets
+6. Clean the data
+7. Repeat the process
+
+This project aims to reduce that repetitive workflow by introducing a conversational search interface and an automated extraction pipeline.
+
+Instead of manually navigating through every profile, the user defines the desired audience and lets the application handle the repetitive research process.
+
+---
+
+# 🔐 Authentication & Privacy
+
+The application is designed around a browser-assisted authentication flow.
+
+Users authenticate directly through the LinkedIn browser session before extraction begins.
+
+### Security principles
+
+- Do not store LinkedIn passwords in application code.
+- Do not commit authentication credentials to Git.
+- Keep secrets in environment variables.
+- Use secure browser sessions.
+- Protect exported lead data.
+- Restrict access to generated datasets.
+- Follow applicable privacy and data-protection requirements.
+
+---
+
+# ⚠️ Responsible Use
+
+This project should only be used for legitimate, authorized, and compliant data-collection purposes.
+
+Users are responsible for ensuring that their scraping activity complies with:
+
+- LinkedIn's applicable terms and policies
+- Privacy regulations
+- Data-protection requirements
+- Applicable local laws
+- Organizational policies
+- Any permissions required for collecting or processing data
+
+The project is intended as a technical demonstration and lead-research tool, not as a mechanism for bypassing authentication, access controls, rate limits, or platform security measures.
+
+---
+
+# 🛠️ Technology Concepts
+
+The project combines several modern development concepts, including:
+
+- Web application development
+- Browser automation
+- AI-assisted query interpretation
+- Data extraction
+- Structured data processing
+- Lead management
+- CSV generation
+- Export management
+- Progress tracking
+- Dashboard development
+
+---
+
+# 📈 Future Improvements
+
+Potential future enhancements include:
+
+- Advanced search filters
+- Additional export formats
+- CRM integrations
+- Better duplicate detection
+- Lead enrichment
+- Advanced filtering
+- Search history
+- Export history
+- Analytics dashboards
+- More detailed extraction controls
+- Improved job monitoring
+- Retry and failure handling
+
+---
+
+# 🎨 Product Design
+
+The application uses a dark, premium interface with a purple/indigo visual identity.
 
 The design focuses on:
 
-* Minimal interface
-* High contrast
-* Clear typography
-* Modern dashboard components
-* Real-time progress indicators
-* Animated interactions
-* Clean data presentation
-* Professional SaaS aesthetics
+- Minimal navigation
+- Clear extraction status
+- Large search-first interface
+- High-contrast controls
+- Progress visibility
+- Dedicated export management
+- Professional SaaS-style presentation
 
-The interface is designed to make a technically complex scraping workflow feel simple to the end user.
-
----
-
-# 📱 Responsive Interface
-
-The application is designed with modern responsive web principles so that the interface can adapt to different screen sizes.
-
-Primary interfaces include:
-
-* Scraper landing page
-* Extraction progress interface
-* Export dashboard
-* Lead data presentation
-
----
-
-# 🔮 Future Improvements
-
-Potential future improvements include:
-
-* Advanced scraping filters
-* More granular targeting
-* Additional export formats
-* CRM integrations
-* Lead enrichment
-* Duplicate detection
-* Advanced lead scoring
-* Saved search templates
-* Scheduled scraping
-* Campaign management
-* More detailed analytics
-* Improved extraction reliability
-* Additional data sources
+The visual system is designed to make a technically complex scraping workflow feel simple and approachable.
 
 ---
 
 # 📌 Project Status
 
-**Active Development**
+**Active Development / Working Prototype**
 
-The LinkedIn Scraper is an actively developed project focused on automated lead discovery, browser-assisted extraction, structured data processing, and export management.
+The core concept includes:
 
----
+- Natural-language scraper input
+- Browser-assisted LinkedIn authentication
+- Active extraction workflow
+- Lead collection
+- Extraction progress monitoring
+- Export dashboard
+- CSV-based output
 
-# 🛠️ Core Capabilities
-
-```text
-✓ Natural-language search
-✓ LinkedIn profile discovery
-✓ Browser-assisted authentication
-✓ Active profile scraping
-✓ Extraction progress tracking
-✓ Lead processing
-✓ Lead storage
-✓ CSV generation
-✓ Export management
-✓ Downloadable datasets
-✓ Multiple scraping jobs
-✓ Modern dashboard UI
-```
+Additional features and production hardening can be added as the project evolves.
 
 ---
 
@@ -667,90 +546,42 @@ The LinkedIn Scraper is an actively developed project focused on automated lead 
 
 Software Engineer focused on:
 
-* Full-Stack Development
-* Artificial Intelligence
-* Automation
-* AI-powered Applications
-* Web Scraping
-* Lead Generation Systems
-* Modern Web Applications
+- Full-Stack Development
+- AI Automation
+- Web Automation
+- AI/LLM Applications
+- Data Extraction
+- SaaS Platforms
+- Business Automation
 
 ---
 
-# 📧 Contact
+# ⭐ Summary
 
-For questions, collaboration, or project inquiries:
+**LinkedIn Scraper** transforms a natural-language lead requirement into a structured LinkedIn research workflow.
 
-**Email:**
-[maazz.dev@gmail.com](mailto:maazz.dev@gmail.com)
+```text
+Describe
+   ↓
+Authenticate
+   ↓
+Scrape
+   ↓
+Process
+   ↓
+Export
+   ↓
+Use
+```
+
+The result is a streamlined lead-research pipeline that turns targeted LinkedIn searches into downloadable structured datasets.
 
 ---
 
-# ⭐ Project Summary
+## 📄 License
 
-**LinkedIn Scraper** transforms a simple natural-language requirement into an automated lead-generation workflow.
+Add the appropriate license here based on the intended distribution and usage of the project.
 
-```text
-USER
-  │
-  │ "Find startup founders in California"
-  ▼
-AI / SEARCH PROCESSING
-  │
-  ▼
-LINKEDIN
-  │
-  ▼
-BROWSER-ASSISTED SCRAPING
-  │
-  ▼
-PROFILE EXTRACTION
-  │
-  ▼
-STRUCTURED LEADS
-  │
-  ▼
-CSV EXPORT
-  │
-  ▼
-READY-TO-USE DATA
-```
+---
 
-> **Describe who you want to find. Let the scraper handle the repetitive work.**
-
-````
-
-### Important for your GitHub images
-
-Since you've uploaded the images **directly into the repository root**, your repository should look like:
-
-```text
-LinkedIn-Scraper/
-│
-├── README.md
-│
-├── Screenshot 2026-08-21 at 2.55.36 PM.png
-│
-└── Screenshot 2026-08-21 at 2.56.42 PM.png
-````
-
-GitHub Markdown can then reference them directly. **However, because your filenames contain spaces and special characters, I strongly recommend renaming them to simpler names**, for example:
-
-```text
-scraper-interface.png
-exports-dashboard.png
-```
-
-Then the README image sections become simply:
-
-```markdown
-![LinkedIn Scraper Interface](scraper-interface.png)
-```
-
-and:
-
-```markdown
-![LinkedIn Scraper Exports Dashboard](exports-dashboard.png)
-```
-
-
+**Built with AI, automation, and modern web technologies.**
